@@ -1,6 +1,9 @@
+import { moveBall } from "@/const/spring";
+import { animated, useSpring } from "@react-spring/web";
 import Head from "next/head";
 
 export default function Home() {
+  const springs = useSpring(moveBall);
   return (
     <>
       <Head>
@@ -24,9 +27,11 @@ export default function Home() {
                 <div className="text-4xl">+44 7597296544</div>
               </div>
               <div className="row-span-2 self-end justify-self-end">
-                <div className="bg-black rounded-full w-64 h-64 relative">
-                  <div className="bg-[#D9D9D9] rounded-full w-12 h-12 top-14 left-2 absolute"></div>
-                </div>
+                <animated.div style={{ ...springs }}>
+                  <div className="bg-black rounded-full w-64 h-64 relative">
+                    <animated.div className="bg-[#D9D9D9] rounded-full w-12 h-12 top-16 left-2 absolute"></animated.div>
+                  </div>
+                </animated.div>
               </div>
             </div>
           </div>
