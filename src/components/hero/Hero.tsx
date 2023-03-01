@@ -13,7 +13,7 @@ export const Hero = () => {
       </div>
       <div className="row-span-1 border-b-[1px] border-black self-end text-end text-8xl overflow-y-hidden">
         <span className="text-base">
-          {<Trail>{wordToLetters("(creative)")}</Trail>}
+          <Trail>{wordToLetters("(creative)")}</Trail>
         </span>
         <Trail>{wordToLetters("FRONT END DEVELOPER")}</Trail>
       </div>
