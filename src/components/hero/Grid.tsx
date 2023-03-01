@@ -6,11 +6,15 @@ export const Row = ({
   textDirection,
   border,
   animateFromLeft,
+  rowSpan,
+  localStyles,
 }: {
   children: ReactNode;
   textDirection?: string;
   border?: boolean;
   animateFromLeft?: boolean;
+  rowSpan?: string;
+  localStyles?: string;
 }) => {
   const [finished, setFinished] = useState(false);
   const springs = useSpring({
@@ -25,9 +29,9 @@ export const Row = ({
     <>
       <animated.div
         style={{ ...springs }}
-        className={`row-span-1 ${
+        className={`${rowSpan || "row-span-1"} ${localStyles} ${
           border && "border-b-[1px] border-black"
-        } self-end text-4xl md:text-5xl lg:text-8xl overflow-y-hidden ${textDirection}`}
+        } self-end text-4xl md:text-5xl lg:text-7xl overflow-y-hidden ${textDirection}`}
       >
         {finished ? children : null}
       </animated.div>
