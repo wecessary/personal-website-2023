@@ -31,7 +31,7 @@ export const Row = ({
         style={{ ...springs }}
         className={`${rowSpan || "row-span-1"} ${localStyles} ${
           border && "border-b-[1px] border-black"
-        } self-end text-4xl md:text-5xl lg:text-7xl overflow-y-hidden ${textDirection}`}
+        } self-end text-4xl md:text-5xl lg:text-7xl overflow-hidden ${textDirection}`}
       >
         {finished ? children : null}
       </animated.div>
