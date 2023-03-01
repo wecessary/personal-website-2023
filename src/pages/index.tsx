@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wesley Jessie</title>
+        <title>Wesley Jessie | Front End Developer</title>
         <meta
           name="description"
           content="Wesley Jessie is a front end developer based in London."
