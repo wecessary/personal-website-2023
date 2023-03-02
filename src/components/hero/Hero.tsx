@@ -6,8 +6,8 @@ import { Row } from "./Grid";
 
 export const Hero = () => {
   return (
-    <section className="grid grid-rows-6 grid-flow-col">
-      <Row config={gridLineConfig} animateFromLeft border>
+    <section className="grid grid-rows-6 grid-flow-col overflow-hidden">
+      <Row animateFromLeft border>
         <h1>
           <Trail animation={appearBottomUp}>
             {wordToLetters("WESLEY JESSIE")}
