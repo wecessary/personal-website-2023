@@ -1,4 +1,4 @@
-import { animated, useSpring, config } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
 import { ReactNode, useState } from "react";
 
 export const Row = ({
@@ -8,6 +8,7 @@ export const Row = ({
   animateFromLeft,
   rowSpan,
   localStyles,
+  config,
 }: {
   children: ReactNode;
   textDirection?: string;
@@ -15,12 +16,13 @@ export const Row = ({
   animateFromLeft?: boolean;
   rowSpan?: string;
   localStyles?: string;
+  config: { tension: number; friction: number };
 }) => {
   const [finished, setFinished] = useState(false);
   const springs = useSpring({
     from: { x: animateFromLeft ? "-100vw" : "100vw" },
     to: { x: "0" },
-    config: config.slow,
+    config: config,
     onRest() {
       setFinished(true);
     },
