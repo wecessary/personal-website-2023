@@ -5,7 +5,7 @@ import { Row } from "./Grid";
 
 export const Hero = () => {
   return (
-    <section className="grid grid-rows-6 grid-flow-col">
+    <section className="grid grid-rows-6 grid-flow-col overflow-hidden">
       <Row animateFromLeft border>
         <h1>
           <Trail>{wordToLetters("WESLEY JESSIE")}</Trail>
