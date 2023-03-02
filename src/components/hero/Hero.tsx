@@ -1,4 +1,8 @@
-import { appearBottomUp, ballGridLineConfig, gridLineConfig } from "@/const/spring";
+import {
+  appearBottomUp,
+  ballGridLineConfig,
+  gridLineConfig,
+} from "@/const/spring";
 import { wordToLetters } from "@/lib/string/wordToLetters";
 import { Trail } from "../common/animation/Trail";
 import { Ball } from "./Ball";
@@ -7,7 +11,7 @@ import { Row } from "./Grid";
 export const Hero = () => {
   return (
     <section className="grid grid-rows-6 grid-flow-col overflow-hidden">
-      <Row animateFromLeft border>
+      <Row config={gridLineConfig} animateFromLeft border>
         <h1>
           <Trail animation={appearBottomUp}>
             {wordToLetters("WESLEY JESSIE")}
