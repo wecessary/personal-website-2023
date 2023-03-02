@@ -1,3 +1,4 @@
+import { appearBottomUp, ballGridLineConfig, gridLineConfig } from "@/const/spring";
 import { wordToLetters } from "@/lib/string/wordToLetters";
 import { Trail } from "../common/animation/Trail";
 import { Ball } from "./Ball";
@@ -8,25 +9,35 @@ export const Hero = () => {
     <section className="grid grid-rows-6 grid-flow-col overflow-hidden">
       <Row animateFromLeft border>
         <h1>
-          <Trail>{wordToLetters("WESLEY JESSIE")}</Trail>
+          <Trail animation={appearBottomUp}>
+            {wordToLetters("WESLEY JESSIE")}
+          </Trail>
         </h1>
       </Row>
-      <Row border textDirection="text-end">
+      <Row config={gridLineConfig} border textDirection="text-end">
         <JobTitle />
       </Row>
-      <Row border animateFromLeft>
+      <Row config={gridLineConfig} border animateFromLeft>
         <div className="text-lg lg:text-4xl">
-          <Trail>{wordToLetters("wesleymhj@gmail.com")}</Trail>
+          <Trail animation={appearBottomUp}>
+            {wordToLetters("wesleymhj@gmail.com")}
+          </Trail>
         </div>
         <div className="text-lg lg:text-4xl">
-          <Trail>{wordToLetters("+447597296544")}</Trail>
+          <Trail animation={appearBottomUp}>
+            {wordToLetters("+447597296544")}
+          </Trail>
         </div>
       </Row>
-      <Row border localStyles="flex justify-end h-32">
+      <Row
+        config={ballGridLineConfig}
+        border
+        localStyles="flex justify-end h-32"
+      >
         <Ball />
       </Row>
-      <Row animateFromLeft border>
-        <Trail>{wordToLetters("LONDON, UK")}</Trail>
+      <Row config={gridLineConfig} animateFromLeft border>
+        <Trail animation={appearBottomUp}>{wordToLetters("LONDON, UK")}</Trail>
       </Row>
     </section>
   );
@@ -35,16 +46,18 @@ export const Hero = () => {
 const JobTitle = () => (
   <>
     <span className="text-sm lg:text-base">
-      <Trail>{wordToLetters("(creative)")}</Trail>
+      <Trail animation={appearBottomUp}>{wordToLetters("(creative)")}</Trail>
     </span>
     {/* laptop view */}
-    <Trail display="hidden lg:inline-block">
+    <Trail animation={appearBottomUp} display="hidden lg:inline-block">
       {wordToLetters("FRONT END DEVELOPER")}
     </Trail>
     {/* mobile view */}
-    <Trail display="inline-block lg:hidden">{wordToLetters("FRONT END")}</Trail>
+    <Trail animation={appearBottomUp} display="inline-block lg:hidden">
+      {wordToLetters("FRONT END")}
+    </Trail>
     <div className="block lg:hidden">
-      <Trail display="inline-block lg:hidden">
+      <Trail animation={appearBottomUp} display="inline-block lg:hidden">
         {wordToLetters("DEVELOPER")}
       </Trail>
     </div>

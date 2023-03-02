@@ -1,16 +1,17 @@
-import { appearBottomUp } from "@/const/spring";
-import { animated, useTrail } from "@react-spring/web";
+import { animated, AnimationProps, useTrail } from "@react-spring/web";
 import { Children, ReactNode } from "react";
 
 export const Trail = ({
   children,
   display,
+  animation,
 }: {
   children: ReactNode;
   display?: string;
+  animation: AnimationProps;
 }) => {
   const items = Children.toArray(children);
-  const trail = useTrail(items.length, appearBottomUp);
+  const trail = useTrail(items.length, animation);
 
   return (
     <>

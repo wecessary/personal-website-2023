@@ -17,3 +17,10 @@ export const appearBottomUp = {
   to: { opacity: 1, y: 0 },
   config: { mass: 5, tension: 2000, friction: 200 },
 };
+
+export const gridLineConfig = {
+  tension: 140,
+  friction: 36,
+};
+
+export const ballGridLineConfig = { tension: 95, friction: 36 }
