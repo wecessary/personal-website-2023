@@ -1,3 +1,4 @@
+import { AboutMe } from "@/components/aboutMe/AboutMe";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionScreen } from "@/components/hero/TransitionScreen";
 import Head from "next/head";
@@ -17,7 +18,12 @@ export default function Home() {
       </Head>
       <main className="font-serif">
         <TransitionScreen onDestroyedCallback={() => setTransitioned(true)} />
-        {transitioned && <Hero />}
+        {transitioned && (
+          <>
+            <Hero />
+            <AboutMe />
+          </>
+        )}
       </main>
     </>
   );
