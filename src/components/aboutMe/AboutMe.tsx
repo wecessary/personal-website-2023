@@ -26,12 +26,12 @@ export const AboutMe = () => {
   }));
 
   const springs2 = useSpring({
-    from: { y: 96, scaleX: 1 },
+    from: { x: -100, y: 10 },
     to: [
-      { y: 0, scaleX: 1.2 },
-      { y: 96, scaleX: 1 },
+      { x: 100, y: -10 },
+      { x: -100, y: 10 },
     ],
-    loop: true,
+    loop: { reverse: true },
     config: config.slow,
   });
 
@@ -80,14 +80,18 @@ export const AboutMe = () => {
             </div>
           </div>
           <div>
-            <div className="flex gap">
-              <animated.div
-                style={{ scaleX: springs2.scaleX }}
-                className="bg-background h-24 w-48 rounded-full"
-              />
+            <div className="flex gap-4">
               <animated.div
                 style={{ y: springs2.y }}
-                className="bg-background h-24 w-12 ml-10"
+                className="bg-background h-48 w-12 mr-20"
+              />
+              <animated.div
+                style={{ x: springs2.x, y: 40 }}
+                className="bg-background h-12 w-12 rounded-full"
+              />
+              <animated.div
+                style={{ y: springs2.y.to((y) => -y) }}
+                className="bg-background h-48 w-12 ml-20"
               />
             </div>
           </div>
