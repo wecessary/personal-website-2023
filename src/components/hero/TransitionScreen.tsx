@@ -1,4 +1,4 @@
-import { animated, useTransition } from "@react-spring/web";
+import { animated, config, useTransition } from "@react-spring/web";
 import { useState } from "react";
 
 export const TransitionScreen = ({

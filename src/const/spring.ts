@@ -18,9 +18,16 @@ export const appearBottomUp = {
   config: { mass: 5, tension: 2000, friction: 200 },
 };
 
+export const pingPong = {
+  from: { x: 0 },
+  to: { x: 30 },
+  config: { tension: 350, friction: 65 },
+  loop: { reverse: true },
+};
+
 export const gridLineConfig = {
   tension: 140,
   friction: 36,
 };
 
-export const ballGridLineConfig = { tension: 95, friction: 36 }
+export const ballGridLineConfig = { tension: 95, friction: 36 };
