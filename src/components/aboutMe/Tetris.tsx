@@ -27,7 +27,7 @@ export const Tetris = ({ parentInView }: ParentInView) => {
     } else {
       api.stop();
     }
-  }, [parentInView, slideDistance]);
+  }, [parentInView, slideDistance, api]);
   return (
     <>
       <div ref={ref}>

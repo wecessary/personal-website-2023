@@ -24,7 +24,7 @@ export const PingPoing = ({ parentInView }: ParentInView) => {
     } else {
       api.stop();
     }
-  }, [parentInView, width]);
+  }, [parentInView, travelDistance, api]);
 
   return (
     <>
