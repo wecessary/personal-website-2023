@@ -1,6 +1,7 @@
 import { AboutMe } from "@/components/aboutMe/AboutMe";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionScreen } from "@/components/hero/TransitionScreen";
+import { MostRecentWork } from "@/components/mostRecentWork/MostRecentWork";
 import Head from "next/head";
 import { useState } from "react";
 
@@ -22,6 +23,7 @@ export default function Home() {
           <>
             <Hero />
             <AboutMe />
+            <MostRecentWork />
           </>
         )}
       </main>
