@@ -28,7 +28,7 @@ export const PingPoing = ({ parentInView }: ParentInView) => {
 
   return (
     <>
-      <div ref={ref} className="flex justify-between gap-4">
+      <div ref={ref} className="hidden md:flex justify-between gap-4">
         <animated.div
           style={{ y: springs2.y }}
           className="bg-background h-36 w-6 mr-20"
