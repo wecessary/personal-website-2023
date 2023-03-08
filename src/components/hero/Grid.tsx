@@ -1,3 +1,4 @@
+import { gridLineAnimation } from "@/const/spring";
 import { textSizeClasses } from "@/const/textSizes";
 import { animated, config, useSpring } from "@react-spring/web";
 import { ReactNode, useState } from "react";
@@ -6,7 +7,8 @@ interface RowProps<T> {
   textDirection?: string;
   textSize: keyof typeof textSizeClasses;
   border?: boolean;
-  animateFromLeft?: boolean;
+  borderColour?: string;
+  animation: keyof typeof gridLineAnimation;
   rowSpan?: string;
   localStyles?: string;
   renderRowChild: (isParentReady: boolean) => ReactNode;
@@ -15,7 +17,8 @@ interface RowProps<T> {
 export function Row<T>({
   textDirection,
   border,
-  animateFromLeft,
+  borderColour,
+  animation,
   rowSpan,
   localStyles,
   textSize,
@@ -23,7 +26,7 @@ export function Row<T>({
 }: RowProps<T>) {
   const [finished, setFinished] = useState(false);
   const springs = useSpring({
-    from: { x: animateFromLeft ? "-100vw" : "100vw" },
+    from: { x: gridLineAnimation[animation] },
     to: { x: "0" },
     onRest() {
       setFinished(true);
@@ -36,8 +39,10 @@ export function Row<T>({
       <animated.div
         style={{ ...springs }}
         className={`${rowSpan || "row-span-1"} ${localStyles} ${
-          border && "border-b-[1px] border-black"
-        }  overflow-hidden ${textDirection} flex justify-center`}
+          border && "border-b-[1px]"
+        } ${
+          borderColour || "border-black"
+        } overflow-hidden ${textDirection} flex justify-center items-center`}
       >
         <div className={`w-[80vw] ${textSizeClasses[textSize]} `}>
           {renderRowChild(finished)}

@@ -31,3 +31,9 @@ export const gridLineConfig = {
 };
 
 export const ballGridLineConfig = { tension: 95, friction: 36 };
+
+export const gridLineAnimation = {
+  noAnimation: "0",
+  animateFromLeft: "-100vw",
+  animateFromRight: "100vw",
+};
