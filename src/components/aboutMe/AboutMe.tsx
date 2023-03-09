@@ -1,6 +1,4 @@
-import { pingPong } from "@/const/spring";
 import { animated, config, useSpring, useInView } from "@react-spring/web";
-import { Trail } from "../common/animation/Trail";
 import { Row } from "../hero/Grid";
 import { PingPoing } from "./PingPong";
 import { Tetris } from "./Tetris";
