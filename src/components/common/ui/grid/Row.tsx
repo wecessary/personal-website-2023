@@ -5,7 +5,6 @@ import { ReactNode, useState } from "react";
 
 interface RowProps<T> {
   textDirection?: string;
-  textSize: keyof typeof textSizeClasses;
   border?: boolean;
   borderColour?: string;
   animation: keyof typeof gridLineAnimation;
@@ -21,7 +20,6 @@ export function Row<T>({
   animation,
   rowSpan,
   localStyles,
-  textSize,
   renderRowChild,
 }: RowProps<T>) {
   const [finished, setFinished] = useState(false);
@@ -42,11 +40,9 @@ export function Row<T>({
           border && "border-b-[1px]"
         } ${
           borderColour || "border-black"
-        } overflow-hidden ${textDirection} flex justify-center items-center`}
+        } overflow-hidden ${textDirection} flex justify-center`}
       >
-        <div className={`w-[80vw] ${textSizeClasses[textSize]} `}>
-          {renderRowChild(finished)}
-        </div>
+        {renderRowChild(finished)}
       </animated.div>
     </>
   );

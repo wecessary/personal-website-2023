@@ -25,7 +25,7 @@ export const Trail = ({
   }, [animationStart, api]);
 
   return (
-    <>
+    <div>
       {trail.map((style, index) => {
         return (
           <animated.div
@@ -37,6 +37,6 @@ export const Trail = ({
           </animated.div>
         );
       })}
-    </>
+    </div>
   );
 };
