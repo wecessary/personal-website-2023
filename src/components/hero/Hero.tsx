@@ -1,49 +1,55 @@
 import { Trail } from "../common/animation/Trail";
-import { Row } from "./Grid";
+import { Row } from "../common/ui/grid/Row";
+import { RowChildContainer } from "../common/ui/grid/RowContainers";
 
 export const Hero = () => {
   return (
-    <section className="grid grid-rows-5 items-end grid-flow-col overflow-hidden min-h-[90vh] lg:min-h-[98vh] ">
+    <section className="grid grid-rows-5 grid-flow-col overflow-hidden min-h-[90vh] lg:min-h-[98vh]">
       <Row
-        textSize="hero"
         animation="animateFromLeft"
         border
         renderRowChild={(isRowReady) => (
-          <Trail animationStart={isRowReady}>{["WESLEY", "JESSIE"]}</Trail>
+          <RowChildContainer childPosition="touchBtBorder" textSize="xl">
+            <Trail animationStart={isRowReady}>{["WESLEY", "JESSIE"]}</Trail>
+          </RowChildContainer>
         )}
       />
       <Row
-        textSize="hero"
         border
         animation="animateFromRight"
         renderRowChild={(isRowReady) => (
-          <Trail animationStart={isRowReady}>
-            {["FRONT", "END", "DEVELOPER"]}
-          </Trail>
+          <RowChildContainer childPosition="touchBtBorder" textSize="xl">
+            <Trail animationStart={isRowReady}>
+              {["FRONT", "END", "DEVELOPER"]}
+            </Trail>
+          </RowChildContainer>
         )}
       />
       <Row
-        textSize="smallHero"
         border
         animation="animateFromLeft"
         renderRowChild={(isRowReady) => (
-          <Trail animationStart={isRowReady}>{"+44 7597296544"}</Trail>
+          <RowChildContainer childPosition="touchBtBorder" textSize="md">
+            <Trail animationStart={isRowReady}>{"+44 7597296544"}</Trail>
+          </RowChildContainer>
         )}
       />
       <Row
-        textSize="smallHero"
         animation="animateFromRight"
         border
         renderRowChild={(isRowReady) => (
-          <Trail animationStart={isRowReady}>{"wesleymhj@gmail.com"}</Trail>
+          <RowChildContainer childPosition="touchBtBorder" textSize="md">
+            <Trail animationStart={isRowReady}>{"wesleymhj@gmail.com"}</Trail>
+          </RowChildContainer>
         )}
       />
       <Row
-        textSize="hero"
         animation="animateFromLeft"
         border
         renderRowChild={(isRowReady) => (
-          <Trail animationStart={isRowReady}>{["LONDON,", "UK"]}</Trail>
+          <RowChildContainer childPosition="touchBtBorder" textSize="xl">
+            <Trail animationStart={isRowReady}>{["LONDON,", "UK"]}</Trail>
+          </RowChildContainer>
         )}
       />
     </section>

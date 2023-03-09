@@ -1,5 +1,6 @@
 import { animated, config, useSpring, useInView } from "@react-spring/web";
-import { Row } from "../hero/Grid";
+import { Row } from "../common/ui/grid/Row";
+import { RowChildContainer } from "../common/ui/grid/RowContainers";
 import { PingPoing } from "./PingPong";
 import { Tetris } from "./Tetris";
 
@@ -25,12 +26,13 @@ export const AboutMe = () => {
           animation="noAnimation"
           border
           borderColour="border-background"
-          textSize="smallHero"
           renderRowChild={() => (
-            <p className="text-justify text-2xl md:text-4xl">
-              Bring your vision to the web with stunning visuals and smooth
-              animations.
-            </p>
+            <RowChildContainer textSize="sm" childPosition="flexColCenter">
+              <p className="text-justify">
+                Bring your vision to the web with stunning visuals and smooth
+                animations.
+              </p>
+            </RowChildContainer>
           )}
         />
         <Row
@@ -38,22 +40,24 @@ export const AboutMe = () => {
           border
           borderColour="border-background"
           rowSpan="row-span-1 md:row-span-2"
-          textSize="smallHero"
           renderRowChild={() => (
-            <div className="flex flex-col md:flex-row md:justify-between">
-              <Tetris parentInView={inView} />
-              <PingPoing parentInView={inView} />
-            </div>
+            <RowChildContainer textSize="sm" childPosition="flexColCenter">
+              <div className="flex flex-col md:flex-row md:justify-between">
+                <Tetris parentInView={inView} />
+                <PingPoing parentInView={inView} />
+              </div>
+            </RowChildContainer>
           )}
         />
         <Row
           animation="noAnimation"
-          textSize="smallHero"
           renderRowChild={() => (
-            <p className="text-justify text-2xl md:text-4xl">
-              I am a front end developer based in London. I build functional and
-              visually appealing websites.
-            </p>
+            <RowChildContainer textSize="sm" childPosition="flexColCenter">
+              <p className="text-justify">
+                I am a front end developer based in London. I build functional
+                and visually appealing websites.
+              </p>
+            </RowChildContainer>
           )}
         />
       </animated.div>
