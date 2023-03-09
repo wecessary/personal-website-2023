@@ -6,16 +6,22 @@ interface RowContainer {
   children: ReactNode;
   textSize: keyof typeof textSizeClasses;
   childPosition: keyof typeof childDisplayClasses;
+  sideBorders?: boolean;
+  sideBorderColour?: string;
 }
 
 export const RowChildContainer = ({
   children,
   textSize,
   childPosition,
+  sideBorders,
+  sideBorderColour,
 }: RowContainer) => {
   return (
     <div
-      className={`w-[80vw] ${textSizeClasses[textSize]} ${childDisplayClasses[childPosition]}`}
+      className={`w-[80vw] ${textSizeClasses[textSize]} ${
+        childDisplayClasses[childPosition]
+      } ${sideBorders && "border-r-2 border-l-2"} ${sideBorderColour}`}
     >
       {children}
     </div>
