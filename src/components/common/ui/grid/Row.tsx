@@ -37,7 +37,7 @@ export function Row<T>({
       <animated.div
         style={{ ...springs }}
         className={`${rowSpan || "row-span-1"} ${localStyles} ${
-          border && "border-b-[1px]"
+          border && "border-b-2"
         } ${
           borderColour || "border-black"
         } overflow-hidden ${textDirection} flex justify-center`}
