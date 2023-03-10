@@ -19,7 +19,7 @@ export const RowChildContainer = ({
 }: RowContainer) => {
   return (
     <div
-      className={`w-[80vw] ${textSizeClasses[textSize]} ${
+      className={`w-[90vw] md:w-[80vw] ${textSizeClasses[textSize]} ${
         childDisplayClasses[childPosition]
       } ${sideBorders && "border-r-2 border-l-2"} ${sideBorderColour}`}
     >
