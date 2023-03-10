@@ -8,3 +8,10 @@ export const waizImages = [
   "/waiz-product.jpg",
   "/waiz-map.jpg",
 ];
+
+export const muscleImages = [
+  "/muscle1.jpg",
+  "/muscle2.jpg",
+  "/muscle1.jpg",
+  "/muscle2.jpg",
+];

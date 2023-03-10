@@ -7,7 +7,9 @@ interface RowContainer {
   textSize: keyof typeof textSizeClasses;
   childPosition: keyof typeof childDisplayClasses;
   sideBorders?: boolean;
-  sideBorderColour?: string;
+  borderColour?: string;
+  bottomBorder?: boolean;
+  overideDefaultWidth?: boolean;
 }
 
 export const RowChildContainer = ({
@@ -15,13 +17,17 @@ export const RowChildContainer = ({
   textSize,
   childPosition,
   sideBorders,
-  sideBorderColour,
+  borderColour,
+  bottomBorder,
+  overideDefaultWidth,
 }: RowContainer) => {
   return (
     <div
-      className={`w-[90vw] md:w-[80vw] ${textSizeClasses[textSize]} ${
-        childDisplayClasses[childPosition]
-      } ${sideBorders && "border-r-2 border-l-2"} ${sideBorderColour}`}
+      className={`${overideDefaultWidth || "w-[90vw] md:w-[80vw]"} ${
+        textSizeClasses[textSize]
+      } ${childDisplayClasses[childPosition]} ${
+        sideBorders && "border-r-2 border-l-2"
+      } ${bottomBorder && "border-b-2"} ${borderColour}`}
     >
       {children}
     </div>
