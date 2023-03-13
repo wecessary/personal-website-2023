@@ -6,14 +6,15 @@ export const TransitionScreen = ({
 }: {
   onDestroyedCallback: () => void;
 }) => {
-  const [items, setItems] = useState(["hello"]);
+  const [items, setItems] = useState(["WESLEY"]);
   const transition = useTransition(items, {
-    from: { backgroundColor: "#000000", color: "#FBF9F9", x: -30 },
+    from: { backgroundColor: "#000000", color: "#FBF9F9", x: -80 },
     enter: { x: 0 },
     leave: {
       backgroundColor: "#FBF9F9",
       color: "#000000",
     },
+    config: config.gentle,
     onRest: () => {
       setItems([]);
     },
@@ -29,7 +30,7 @@ export const TransitionScreen = ({
           style={{ backgroundColor }}
           className={`h-screen flex justify-center items-center`}
         >
-          <animated.p style={style} className="text-4xl italic">
+          <animated.p style={style} className="text-4xl font-bold">
             {item.split("").map((letter, index) => (
               <animated.span
                 key={index}
