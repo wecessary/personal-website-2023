@@ -29,7 +29,7 @@ export const Trail = ({
       {trail.map((style, index) => {
         return (
           <animated.div
-            className={`${display || "inline-block"} mx-1 lg:mx-2`}
+            className={`${display || "inline-block"}`}
             key={index}
             style={style}
           >
