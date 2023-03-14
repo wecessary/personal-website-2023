@@ -1,8 +1,7 @@
-import { waizImages } from "@/const/images";
-import { textSizeClasses } from "@/const/textSizes";
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
 import { InfiniteBanner } from "../common/ui/InfiniteBanner";
+import { ProjectTitle } from "./Title";
 
 interface ProjectProps {
   title: string;
@@ -23,11 +22,7 @@ export const Project = ({
 }: ProjectProps) => {
   return (
     <>
-      <div className="flex justify-center">
-        <div className={`${textSizeClasses.lg} w-[90vw] md:w-[80vw]`}>
-          <h2>{title}</h2>
-        </div>
-      </div>
+      <ProjectTitle title={title} />
       <div className="min-h-screen grid grid-rows-2">
         <Row
           localStyles="border-t-2"
