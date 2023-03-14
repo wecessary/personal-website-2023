@@ -7,44 +7,52 @@ interface InfiniteBannerProps {
   itemsSrc: string[];
   numberOfRepeatItems: number;
   itemType: "image" | "text";
+  leftToright?: boolean;
 }
 
 export const InfiniteBanner = ({
   itemsSrc,
   numberOfRepeatItems,
   itemType,
+  leftToright,
 }: InfiniteBannerProps) => {
   const { isPhone, isTablet } = useScreenSize();
-  const itemWidth = isPhone ? 150 : isTablet ? 60 : 45;
+  const pictureWidth = isPhone ? 150 : isTablet ? 60 : 45;
+  const textWidth = isPhone ? 70 : isTablet ? 75 : 60;
+  const itemWidth = itemType === "image" ? pictureWidth : textWidth;
   const itemGap = !isPhone ? 1 : 3;
   const containerWidth = itemWidth * (itemsSrc.length + 1);
+  const slidingDistance =
+    (itemWidth + itemGap) * (itemsSrc.length - numberOfRepeatItems);
+  /* this is the amount of shifting distance that it takes to move the banner to a position
+    where repeating items are in view. When they are inView, it looks like the banner has started from the beginning again.
+    And this is where the animation will stop and start again, looking like an infinite loop.
+    */
+  const imageDuration = isPhone ? 35000 : 30000;
+  const textDuration = isPhone ? 30000 : 50000;
+  const duration = itemType === "image" ? imageDuration : textDuration;
 
   const [spring, api] = useSpring(() => ({
-    from: { x: "0" },
+    from: { x: leftToright ? `-${slidingDistance}vw` : "0" },
   }));
 
   const [ref, inView] = useInView({ amount: 0.5 });
 
   useEffect(() => {
-    const slidingDistance = () => {
-      const numberOfOneTimePics = itemsSrc.length - numberOfRepeatItems;
-      return (itemWidth + itemGap) * numberOfOneTimePics;
-      /* this is the amount of shifting distance that it takes to move the banner to a position
-        where repeating items are in view. When they are inView, it looks like the banner has started from the beginning again.
-        And this is where the animation will stop and start again, looking like an infinite loop.
-        */
-    };
     if (inView) {
       api.start({
         reset: true,
-        to: { x: `-${slidingDistance()}vw` },
-        config: { duration: isPhone ? 35000 : 30000 },
+        to: {
+          x: leftToright ? "0" : `-${slidingDistance}vw`,
+        },
+
+        config: { duration: duration },
         loop: true,
       });
     } else {
       api.stop();
     }
-  }, [itemGap, itemWidth, api, itemsSrc, numberOfRepeatItems, isPhone, inView]);
+  }, [api, itemsSrc, isPhone, inView, leftToright, slidingDistance, duration]);
 
   return (
     <>
@@ -55,7 +63,7 @@ export const InfiniteBanner = ({
             gap: `${itemGap}vw`,
             ...spring,
           }}
-          className="flex"
+          className={`flex`}
         >
           {itemsSrc.map((src, index) => {
             if (itemType === "image") {
@@ -69,6 +77,17 @@ export const InfiniteBanner = ({
                   className="h-auto"
                   alt=""
                 />
+              );
+            }
+            if (itemType === "text") {
+              return (
+                <div
+                  key={index}
+                  style={{ width: `${itemWidth}vw` }}
+                  className="font-medium text-2xl md:text-6xl lg:text-8xl"
+                >
+                  {src}
+                </div>
               );
             }
           })}

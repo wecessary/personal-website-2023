@@ -1,6 +1,8 @@
 import { AboutMe } from "@/components/aboutMe/AboutMe";
+import { InfiniteBanner } from "@/components/common/ui/InfiniteBanner";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionScreen } from "@/components/hero/TransitionScreen";
+import { Portfolio } from "@/components/portfolio/Portfolio";
 import { Project } from "@/components/portfolio/Project";
 import { muscleImages, waizImages } from "@/const/images";
 import Head from "next/head";
@@ -24,22 +26,7 @@ export default function Home() {
           <>
             <Hero />
             <AboutMe />
-            <Project
-              title="(1)Waiz Water Ecommerce"
-              projectImages={waizImages}
-              repeatingImages={3}
-              client={"Waiz New Zealand Blue Spring Water"}
-              role="Design and Dev"
-              techStack="NEXT JS, Typescript, Jest, Cypress.io, Shpoify as a headless CMS"
-            />
-            <Project
-              title="(2) Muscle Department"
-              projectImages={muscleImages}
-              repeatingImages={2}
-              client={"myself"}
-              role="Design and Dev"
-              techStack="React, Typescript, React Router, Jest, Firebase"
-            />
+            <Portfolio />
           </>
         )}
       </main>

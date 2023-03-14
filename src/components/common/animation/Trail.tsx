@@ -26,10 +26,16 @@ export const Trail = ({
 
   return (
     <div>
-      {trail.map((style, index) => {
+      {trail.map((style, index, array) => {
         return (
           <animated.div
-            className={`${display || "inline-block"} mx-1 lg:mx-2`}
+            className={`${display || "inline-block"} ${
+              index === 0
+                ? "mr-1 lg:mr-2"
+                : index === array.length - 1
+                ? "ml-1 lg:ml-2"
+                : "mx-1 lg:mx-2"
+            }`}
             key={index}
             style={style}
           >
