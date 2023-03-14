@@ -1,5 +1,5 @@
 import { useScreenSize } from "@/hooks/useScreenSize";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated, useInView } from "@react-spring/web";
 import { useEffect } from "react";
 import Image from "next/image";
 
@@ -23,6 +23,8 @@ export const InfiniteBanner = ({
     from: { x: "0" },
   }));
 
+  const [ref, inView] = useInView({ amount: 0.5 });
+
   useEffect(() => {
     const slidingDistance = () => {
       const numberOfOneTimePics = itemsSrc.length - numberOfRepeatItems;
@@ -32,19 +34,21 @@ export const InfiniteBanner = ({
         And this is where the animation will stop and start again, looking like an infinite loop.
         */
     };
-
-    api.start({
-      reset: true,
-      to: { x: `-${slidingDistance()}vw` },
-      config: { duration: isPhone ? 35000 : 30000 },
-      loop: true,
-    });
-  }, [itemGap, itemWidth, api, itemsSrc, numberOfRepeatItems, isPhone]);
-  console.log(isPhone, isTablet);
+    if (inView) {
+      api.start({
+        reset: true,
+        to: { x: `-${slidingDistance()}vw` },
+        config: { duration: isPhone ? 35000 : 30000 },
+        loop: true,
+      });
+    } else {
+      api.stop();
+    }
+  }, [itemGap, itemWidth, api, itemsSrc, numberOfRepeatItems, isPhone, inView]);
 
   return (
     <>
-      <div className="overflow-hidden w-full">
+      <div ref={ref} className="overflow-hidden w-full">
         <animated.div
           style={{
             width: `${containerWidth}vw`,
