@@ -31,10 +31,10 @@ export const Trail = ({
           <animated.div
             className={`${display || "inline-block"} ${
               index === 0
-                ? "mr-1 lg:mr-2"
+                ? "mr-2 lg:mr-4 xl:mr-6"
                 : index === array.length - 1
-                ? "ml-1 lg:ml-2"
-                : "mx-1 lg:mx-2"
+                ? "mx-0"
+                : "mr-2 lg:mr-4 xl:mr-6"
             }`}
             key={index}
             style={style}
