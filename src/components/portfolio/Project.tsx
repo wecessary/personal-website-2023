@@ -1,6 +1,6 @@
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
-import { InfiniteBanner } from "../common/ui/InfiniteBanner";
+import { InfiniteBanner } from "../common/animation/InfiniteBanner";
 import { ProjectTitle } from "./Title";
 
 interface ProjectProps {

@@ -1,6 +1,6 @@
 import { waizImages, muscleImages } from "@/const/images";
 import { ReactNode } from "react";
-import { InfiniteBanner } from "../common/ui/InfiniteBanner";
+import { InfiniteBanner } from "../common/animation/InfiniteBanner";
 import { Project } from "./Project";
 
 export const Portfolio = () => {

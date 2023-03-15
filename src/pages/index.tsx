@@ -1,5 +1,5 @@
 import { AboutMe } from "@/components/aboutMe/AboutMe";
-import { InfiniteBanner } from "@/components/common/ui/InfiniteBanner";
+import { InfiniteBanner } from "@/components/common/animation/InfiniteBanner";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionScreen } from "@/components/hero/TransitionScreen";
 import { Portfolio } from "@/components/portfolio/Portfolio";
