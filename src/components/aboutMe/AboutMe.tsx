@@ -1,3 +1,4 @@
+import { useScreenSize } from "@/hooks/useScreenSize";
 import { animated, config, useSpring, useInView } from "@react-spring/web";
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
@@ -14,6 +15,7 @@ export const AboutMe = () => {
     },
     config: config.slow,
   });
+  const { isPhone } = useScreenSize();
 
   return (
     <>
@@ -44,7 +46,7 @@ export const AboutMe = () => {
             <RowChildContainer textSize="sm" childPosition="flexColCenter">
               <div className="flex flex-col md:flex-row md:justify-between">
                 <Tetris parentInView={inView} />
-                <PingPoing parentInView={inView} />
+                {!isPhone && <PingPoing parentInView={inView} />}
               </div>
             </RowChildContainer>
           )}
