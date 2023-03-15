@@ -10,7 +10,7 @@ export const Portfolio = () => {
         <BannerContainer dark>
           <InfiniteBanner
             leftToright
-            itemsSrc={Array(10).fill("FEATURED WORK ▲")}
+            itemsSrc={Array(10).fill("FEATURED WORK")}
             numberOfRepeatItems={1}
             itemType="text"
           />
@@ -18,7 +18,7 @@ export const Portfolio = () => {
       </div>
       <BannerContainer borderBt>
         <InfiniteBanner
-          itemsSrc={Array(10).fill("▼ FEATURED WORK")}
+          itemsSrc={Array(10).fill("FEATURED WORK")}
           numberOfRepeatItems={1}
           itemType="text"
         />
