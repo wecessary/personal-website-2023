@@ -10,6 +10,7 @@ interface RowContainer {
   borderColour?: string;
   bottomBorder?: boolean;
   overideDefaultWidth?: boolean;
+  p?: string;
 }
 
 export const RowChildContainer = ({
@@ -20,6 +21,7 @@ export const RowChildContainer = ({
   borderColour,
   bottomBorder,
   overideDefaultWidth,
+  p,
 }: RowContainer) => {
   return (
     <div
@@ -27,7 +29,7 @@ export const RowChildContainer = ({
         textSizeClasses[textSize]
       } ${childDisplayClasses[childPosition]} ${
         sideBorders && "border-r-2 border-l-2"
-      } ${bottomBorder && "border-b-2"} ${borderColour}`}
+      } ${bottomBorder && "border-b-2"} ${borderColour} ${p}`}
     >
       {children}
     </div>
