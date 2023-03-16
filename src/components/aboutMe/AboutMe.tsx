@@ -8,10 +8,10 @@ import { Tetris } from "./Tetris";
 export const AboutMe = () => {
   const [ref, inView] = useInView({ amount: 0.8 });
   const springs = useSpring({
-    from: { backgroundColor: "#FBF9F9", color: "#000000" },
+    from: { backgroundColor: "#FBF1EA", color: "#312E1D" },
     to: {
-      backgroundColor: inView ? "#000000" : "#FBF9F9",
-      color: inView ? "#FBF9F9" : "#000000",
+      backgroundColor: inView ? "#312E1D" : "#FBF1EA",
+      color: inView ? "#D6916C" : "#312E1D",
     },
     config: config.slow,
   });

@@ -6,7 +6,11 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: { background: "#FBF9F9", ...defaultTheme.colors },
+      colors: {
+        background: "#fbf1ea",
+        black: "#312E1D",
+        ...defaultTheme.colors,
+      },
       fontFamily: {
         serif: ["var(--hv-analogue)", ...defaultTheme.fontFamily.serif],
       },

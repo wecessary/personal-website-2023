@@ -8,11 +8,11 @@ export const TransitionScreen = ({
 }) => {
   const [items, setItems] = useState(["WESLEY"]);
   const transition = useTransition(items, {
-    from: { backgroundColor: "#000000", color: "#FBF9F9", x: -80 },
+    from: { backgroundColor: "#312E1D", color: "#fbf1ea", x: -80 },
     enter: { x: 0 },
     leave: {
-      backgroundColor: "#FBF9F9",
-      color: "#000000",
+      backgroundColor: "#fbf1ea",
+      color: "#312E1D",
     },
     config: config.gentle,
     onRest: () => {

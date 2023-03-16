@@ -4,7 +4,7 @@ import { RowChildContainer } from "../common/ui/grid/RowContainers";
 export const Cta = () => {
   return (
     <>
-      <section className="min-h-[80vh] md:min-h-screen flex justify-center">
+      <section className="min-h-[80vh] md:min-h-screen flex justify-center text-black">
         <RowChildContainer
           sideBorders
           textSize="lg"

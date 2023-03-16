@@ -6,7 +6,7 @@ import { Project } from "./Project";
 export const Portfolio = () => {
   return (
     <>
-      <div className="flex justify-center border-t-2 border-black">
+      <div className="flex justify-center border-t-2 border-black text-black">
         <BannerContainer dark>
           <InfiniteBanner
             leftToright

@@ -12,13 +12,13 @@ export const Trail = ({
 }) => {
   const items = Children.toArray(children);
   const [trail, api] = useTrail(items.length, () => ({
-    from: { y: 300 },
+    from: { y: 300, filter: "blur(6px)" },
   }));
 
   useEffect(() => {
     if (animationStart) {
       api.start({
-        to: { y: 0 },
+        to: [{ y: 0 }, { filter: "blur(0px)" }],
         config: config.slow,
       });
     }

@@ -23,7 +23,7 @@ export const Project = ({
   return (
     <>
       <ProjectTitle title={title} />
-      <div className="min-h-screen grid grid-rows-2">
+      <div className="min-h-screen grid grid-rows-2 text-black">
         <Row
           localStyles="border-t-2"
           border
