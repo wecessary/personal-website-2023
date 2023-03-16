@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: { background: "#FBF9F9", ...defaultTheme.colors },
       fontFamily: {
-        serif: ["var(--bodoni)", ...defaultTheme.fontFamily.serif],
+        serif: ["var(--hv-analogue)", ...defaultTheme.fontFamily.serif],
       },
     },
   },
