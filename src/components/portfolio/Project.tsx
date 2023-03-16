@@ -23,7 +23,7 @@ export const Project = ({
   return (
     <>
       <ProjectTitle title={title} />
-      <div className="min-h-screen grid grid-rows-2">
+      <div className="min-h-screen grid grid-rows-2 text-orange">
         <Row
           localStyles="border-t-2"
           border
@@ -31,7 +31,7 @@ export const Project = ({
           renderRowChild={() => (
             <RowChildContainer
               sideBorders
-              borderColour="border-black"
+              borderColour="border-orange"
               textSize="xs"
               childPosition="flexColCenter"
             >
@@ -49,7 +49,7 @@ export const Project = ({
           renderRowChild={() => (
             <RowChildContainer
               sideBorders
-              borderColour="border-black"
+              borderColour="border-orange"
               textSize="xs"
               childPosition="none"
             >
@@ -58,7 +58,7 @@ export const Project = ({
                   textSize="xs"
                   childPosition="flexColCenter"
                   bottomBorder
-                  borderColour="border-black"
+                  borderColour="border-orange"
                 >
                   <p className="text-base px-2">client:</p>
                   <p className="px-2">{client}</p>
@@ -67,7 +67,7 @@ export const Project = ({
                   textSize="xs"
                   childPosition="flexColCenter"
                   bottomBorder
-                  borderColour="border-black"
+                  borderColour="border-orange"
                 >
                   <p className="text-base px-2">role:</p>
                   <p className="px-2">{role}</p>
@@ -76,7 +76,7 @@ export const Project = ({
                   textSize="xs"
                   childPosition="flexColCenter"
                   bottomBorder
-                  borderColour="border-black"
+                  borderColour="border-orange"
                 >
                   <p className="text-base px-2">tech stack:</p>
                   <p className="px-2">{techStack}</p>
@@ -84,7 +84,7 @@ export const Project = ({
                 <RowChildContainer
                   textSize="xs"
                   childPosition="flexColCenter"
-                  borderColour="border-black"
+                  borderColour="border-orange"
                 >
                   <p className="px-2">Visit Now</p>
                 </RowChildContainer>

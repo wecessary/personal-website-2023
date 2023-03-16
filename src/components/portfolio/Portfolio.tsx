@@ -6,7 +6,7 @@ import { Project } from "./Project";
 export const Portfolio = () => {
   return (
     <>
-      <div className="flex justify-center border-t-2 border-black">
+      <div className="flex justify-center border-t-2 border-orange text-orange">
         <BannerContainer dark>
           <InfiniteBanner
             leftToright
@@ -52,16 +52,18 @@ const BannerContainer = ({
   dark?: boolean;
   borderBt?: boolean;
 }) => {
-  const theme = dark ? "bg-black text-background" : "bg-background text-black";
+  const theme = dark
+    ? "bg-orange text-background"
+    : "bg-background text-orange";
   return (
     <>
       <div
         className={`flex justify-center border-t-2 ${
           borderBt && "border-b-2"
-        } border-black`}
+        } border-orange`}
       >
         <div
-          className={`w-[90vw] md:w-[80vw] min-h-[15vh] md:min-h-[30vh] flex flex-col justify-center border-r-2 border-l-2 ${theme} border-black`}
+          className={`w-[90vw] md:w-[80vw] min-h-[15vh] md:min-h-[30vh] flex flex-col justify-center border-r-2 border-l-2 ${theme} border-orange`}
         >
           {children}
         </div>

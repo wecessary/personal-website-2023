@@ -39,7 +39,7 @@ export function Row<T>({
         className={`${rowSpan || "row-span-1"} ${localStyles} ${
           border && "border-b-2"
         } ${
-          borderColour || "border-black"
+          borderColour || "border-orange"
         } overflow-hidden ${textDirection} flex justify-center`}
       >
         {renderRowChild(finished)}
