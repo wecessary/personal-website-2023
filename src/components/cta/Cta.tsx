@@ -10,16 +10,17 @@ export const Cta = () => {
           textSize="lg"
           childPosition="flexColCenter"
           borderColour="border-black"
+          p="px-2"
         >
           <div className="text-gray-500">TIRED OF</div>
           <div className="text-gray-500">GENRIC</div>
           <div className="text-gray-500">TEMPLATES?</div>
           <Rainbow />
-          <div className="text-end text-lg md:text-2xl">{"Let's talk."}</div>
-          <div className="text-end text-lg md:text-2xl">
+          <div className="text-end text-base md:text-2xl">{"Let's talk."}</div>
+          <div className="text-end text-base md:text-2xl">
             wesleymhj@gmail.com
           </div>
-          <div className="text-end text-lg md:text-2xl">+44 7597296544</div>
+          <div className="text-end text-base md:text-2xl">+44 7597296544</div>
         </RowChildContainer>
       </section>
     </>
