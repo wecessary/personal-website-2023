@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         background: "#fbf1ea",
         black: "#312E1D",
+        orange: "#AC521F",
         ...defaultTheme.colors,
       },
       fontFamily: {

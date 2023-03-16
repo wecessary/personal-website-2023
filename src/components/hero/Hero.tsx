@@ -4,7 +4,7 @@ import { RowChildContainer } from "../common/ui/grid/RowContainers";
 
 export const Hero = () => {
   return (
-    <section className="grid grid-rows-5 grid-flow-col overflow-hidden min-h-[90vh] lg:min-h-[98vh] text-black">
+    <section className="grid grid-rows-5 grid-flow-col overflow-hidden min-h-[90vh] lg:min-h-[98vh] text-orange">
       <Row
         animation="animateFromLeft"
         border

@@ -12,7 +12,7 @@ export const TransitionScreen = ({
     enter: { x: 0 },
     leave: {
       backgroundColor: "#fbf1ea",
-      color: "#312E1D",
+      color: "#AC521F",
     },
     config: config.gentle,
     onRest: () => {
