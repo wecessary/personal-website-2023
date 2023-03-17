@@ -7,6 +7,7 @@ export const Cta = () => {
       <section className="min-h-[80vh] md:min-h-screen flex justify-center">
         <RowChildContainer
           sideBorders
+          bottomBorder
           textSize="lg"
           childPosition="flexColCenter"
           borderColour="border-orange"
