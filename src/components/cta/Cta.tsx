@@ -25,6 +25,9 @@ export const Cta = () => {
           <div className="text-end text-base md:text-2xl text-black">
             +44 7597296544
           </div>
+          <div className="text-end text-base md:text-2xl text-black">
+            Available worldwide.
+          </div>
         </RowChildContainer>
       </section>
     </>
