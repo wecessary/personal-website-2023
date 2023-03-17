@@ -1,15 +1,49 @@
-import { animated, useScroll } from "@react-spring/web";
+import { useScreenSize } from "@/hooks/useScreenSize";
+import { animated, useScroll, useSpring } from "@react-spring/web";
+import { useState } from "react";
 
 export const CD = () => {
   const { scrollY } = useScroll();
+  const { isPhone, isTablet } = useScreenSize();
+
+  const regularSize = { scale: 1, x: 0, y: 0 };
+  const shift = isPhone || isTablet ? 50 : 90;
+  const bigSize = { scale: 2, x: -shift, y: shift };
+  const [spring, api] = useSpring(() => ({
+    from: regularSize,
+  }));
+  const [enlargerd, setEnlarged] = useState(false);
+
+  function handleOnEnter() {
+    api.start({
+      to: bigSize,
+    });
+    setEnlarged(true);
+  }
+  function handleOnLeave() {
+    api.start({
+      to: regularSize,
+    });
+    setEnlarged(false);
+  }
+  function handleOnClick() {
+    api.start({
+      to: enlargerd ? regularSize : bigSize,
+    });
+    setEnlarged(!enlargerd);
+  }
+
   return (
     <>
       <animated.div
-        style={{ rotate: scrollY }}
+        onMouseEnter={handleOnEnter}
+        onMouseLeave={handleOnLeave}
+        onClick={handleOnClick}
+        style={{ rotate: scrollY, ...spring }}
         className="fixed top-4 right-4 z-50"
       >
         <svg
-          className="w-24 h-24 lg:w-40 lg:h-40 xl:w-48 xl:h-48 hover:h-32 hover:w-32 hover:lg:h-72 hover:lg:w-72"
+          className="w-24 h-24 lg:w-40 lg:h-40 xl:w-48 xl:h-48"
           width="800"
           height="800"
           viewBox="0 0 800 800"
