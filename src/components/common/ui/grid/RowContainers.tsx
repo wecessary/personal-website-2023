@@ -12,6 +12,7 @@ interface RowContainer {
   overideDefaultWidth?: boolean;
   p?: string;
   fontBold?: boolean;
+  hover?: boolean;
 }
 
 export const RowChildContainer = ({
@@ -24,6 +25,7 @@ export const RowChildContainer = ({
   overideDefaultWidth,
   p,
   fontBold,
+  hover,
 }: RowContainer) => {
   return (
     <div
@@ -33,7 +35,7 @@ export const RowChildContainer = ({
         sideBorders && "border-r-2 border-l-2"
       } ${bottomBorder && "border-b-2"} ${borderColour} ${p} ${
         fontBold && "font-bold"
-      }`}
+      } ${hover && "hover:bg-black hover:text-background"}`}
     >
       {children}
     </div>

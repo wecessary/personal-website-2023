@@ -1,5 +1,6 @@
 import { AboutMe } from "@/components/aboutMe/AboutMe";
 import { CD } from "@/components/CD";
+import { Contact } from "@/components/contact/Contact";
 import { Cta } from "@/components/cta/Cta";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionScreen } from "@/components/hero/TransitionScreen";
@@ -28,6 +29,7 @@ export default function Home() {
             <AboutMe />
             <Portfolio />
             <Cta />
+            <Contact />
           </>
         )}
       </main>
