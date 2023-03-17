@@ -9,7 +9,11 @@ export const Hero = () => {
         animation="animateFromLeft"
         border
         renderRowChild={(isRowReady) => (
-          <RowChildContainer childPosition="touchBtBorder" textSize="xl">
+          <RowChildContainer
+            childPosition="touchBtBorder"
+            textSize="xl"
+            fontBold
+          >
             <Trail animationStart={isRowReady}>{["WESLEY", "JESSIE"]}</Trail>
           </RowChildContainer>
         )}
@@ -18,7 +22,11 @@ export const Hero = () => {
         border
         animation="animateFromRight"
         renderRowChild={(isRowReady) => (
-          <RowChildContainer childPosition="touchBtBorder" textSize="xl">
+          <RowChildContainer
+            childPosition="touchBtBorder"
+            textSize="xl"
+            fontBold
+          >
             <Trail animationStart={isRowReady}>
               {["FRONT", "END", "DEVELOPER"]}
             </Trail>
@@ -29,7 +37,11 @@ export const Hero = () => {
         border
         animation="animateFromLeft"
         renderRowChild={(isRowReady) => (
-          <RowChildContainer childPosition="touchBtBorder" textSize="md">
+          <RowChildContainer
+            childPosition="touchBtBorder"
+            textSize="md"
+            fontBold
+          >
             <Trail animationStart={isRowReady}>{"+44 7597296544"}</Trail>
           </RowChildContainer>
         )}
@@ -38,7 +50,11 @@ export const Hero = () => {
         animation="animateFromRight"
         border
         renderRowChild={(isRowReady) => (
-          <RowChildContainer childPosition="touchBtBorder" textSize="md">
+          <RowChildContainer
+            childPosition="touchBtBorder"
+            textSize="md"
+            fontBold
+          >
             <Trail animationStart={isRowReady}>{"wesleymhj@gmail.com"}</Trail>
           </RowChildContainer>
         )}
@@ -47,7 +63,11 @@ export const Hero = () => {
         animation="animateFromLeft"
         border
         renderRowChild={(isRowReady) => (
-          <RowChildContainer childPosition="touchBtBorder" textSize="xl">
+          <RowChildContainer
+            childPosition="touchBtBorder"
+            textSize="xl"
+            fontBold
+          >
             <Trail animationStart={isRowReady}>{["LONDON,", "UK"]}</Trail>
           </RowChildContainer>
         )}
