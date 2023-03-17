@@ -12,13 +12,13 @@ export const Trail = ({
 }) => {
   const items = Children.toArray(children);
   const [trail, api] = useTrail(items.length, () => ({
-    from: { y: 300, filter: "blur(6px)" },
+    from: { y: 300 },
   }));
 
   useEffect(() => {
     if (animationStart) {
       api.start({
-        to: [{ y: 0 }, { filter: "blur(0px)" }],
+        to: { y: 0 },
         config: config.slow,
       });
     }
@@ -31,10 +31,10 @@ export const Trail = ({
           <animated.div
             className={`${display || "inline-block"} ${
               index === 0
-                ? "mr-2 lg:mr-4 xl:mr-6"
+                ? "mr-2 lg:mr-3"
                 : index === array.length - 1
                 ? "mx-0"
-                : "mr-2 lg:mr-4 xl:mr-6"
+                : "mr-2 lg:mr-3"
             }`}
             key={index}
             style={style}
