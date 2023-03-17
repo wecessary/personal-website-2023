@@ -56,6 +56,11 @@ export const Contact = () => {
           )}
         />
       </section>
+      <div className="flex justify-center my-2">
+        <div className="w-[90vw] md:w-[80vw] text-end font-bold text-orange text-xs md:text-base">
+          Designed and dev by Wesley Jessie
+        </div>
+      </div>
     </>
   );
 };
