@@ -10,7 +10,9 @@ export const CD = () => {
   const shift = isPhone || isTablet ? 50 : 90;
   const bigSize = { scale: 2, x: -shift, y: shift };
   const [spring, api] = useSpring(() => ({
-    from: regularSize,
+    from: { scale: 1, x: 1000, y: 0 },
+    to: regularSize,
+    delay: 1000,
   }));
   const [enlargerd, setEnlarged] = useState(false);
 
