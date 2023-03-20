@@ -36,7 +36,7 @@ export const InfiniteBanner = ({
     from: { x: leftToright ? `-${slidingDistance}vw` : "0" },
   }));
 
-  const [ref, inView] = useInView({ amount: 0.5 });
+  const [ref, inView] = useInView({ amount: 0.8, once: true });
 
   useEffect(() => {
     if (inView) {
