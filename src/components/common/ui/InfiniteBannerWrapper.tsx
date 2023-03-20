@@ -20,7 +20,7 @@ export const InfiniteBannerWrapper = ({
         } border-orange`}
       >
         <div
-          className={`w-[90vw] md:w-[80vw] min-h-[15vh] md:min-h-[30vh] flex flex-col justify-center border-x-2 ${theme} border-orange`}
+          className={`w-[90vw] md:w-[80vw] min-h-[20vh] md:min-h-[30vh] flex flex-col justify-center border-x-2 ${theme} border-orange`}
         >
           {children}
         </div>
