@@ -17,8 +17,6 @@ export const Rainbow = ({}) => {
     "4d908e",
   ];
 
-  const colour2 = ["ea8c55", "c75146", "ad2e24", "81171b", "540804"];
-
   const [trails, api] = useTrail(text.length, () => ({
     from: { y: 40, opacity: 0 },
   }));
