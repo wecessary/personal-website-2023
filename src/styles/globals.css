@@ -1,16 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.infinite-carousel {
-  animation: infinite-slide 14s linear infinite;
-}
-
-@keyframes infinite-slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-155vw);
-  }
-}
