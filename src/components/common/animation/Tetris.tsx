@@ -33,7 +33,7 @@ export const Tetris = ({ parentInView }: ParentInView) => {
       <div ref={ref}>
         <animated.div
           style={{ x: springs1.x }}
-          className="w-16 h-16 bg-background"
+          className="w-16 h-16 bg-[#D6916C]"
         />
         <div className="flex justify-between gap-4 mt-4">
           {Array(3)
@@ -42,7 +42,7 @@ export const Tetris = ({ parentInView }: ParentInView) => {
               <animated.div
                 key={index}
                 style={{ rotate: springs1.rotate }}
-                className="w-16 h-16 bg-background"
+                className="w-16 h-16 bg-[#D6916C]"
               />
             ))}
         </div>
