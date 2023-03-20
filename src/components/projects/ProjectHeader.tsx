@@ -1,7 +1,7 @@
 import { useInView } from "@react-spring/web";
 import { Trail } from "../common/animation/Trail";
 
-export const ProjectTitle = ({ title }: { title: string }) => {
+export const ProjectHeader = ({ title }: { title: string }) => {
   const [ref, inView] = useInView({ amount: 1, once: true });
 
   return (

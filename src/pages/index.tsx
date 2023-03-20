@@ -4,7 +4,7 @@ import { Contact } from "@/components/contact/Contact";
 import { Cta } from "@/components/cta/Cta";
 import { Hero } from "@/components/hero/Hero";
 import { TransitionScreen } from "@/components/common/ui/TransitionScreen";
-import { Portfolio } from "@/components/portfolio/Portfolio";
+import { Projects } from "@/components/projects/Projects";
 import Head from "next/head";
 import { useState } from "react";
 
@@ -27,7 +27,7 @@ export default function Home() {
             <CD />
             <Hero />
             <AboutMe />
-            <Portfolio />
+            <Projects />
             <Cta />
             <Contact />
           </>
