@@ -18,7 +18,7 @@ export const InfiniteBanner = ({
 }: InfiniteBannerProps) => {
   const { isPhone, isTablet } = useScreenSize();
   const pictureWidth = isPhone ? 150 : isTablet ? 60 : 45;
-  const textWidth = isPhone ? 70 : isTablet ? 75 : 65;
+  const textWidth = isPhone ? 90 : isTablet ? 75 : 65;
   const itemWidth = itemType === "image" ? pictureWidth : textWidth;
   const itemGap = !isPhone ? 1 : 3;
   const containerWidth = itemWidth * (itemsSrc.length + 1);
@@ -84,7 +84,7 @@ export const InfiniteBanner = ({
                 <div
                   key={index}
                   style={{ width: `${itemWidth}vw` }}
-                  className="font-medium text-2xl md:text-5xl lg:text-7xl xl:text-8xl"
+                  className="font-bold text-3xl md:text-5xl lg:text-7xl xl:text-8xl"
                 >
                   {src}
                 </div>
