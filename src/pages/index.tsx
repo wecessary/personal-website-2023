@@ -24,6 +24,7 @@ export default function Home() {
         <TransitionScreen onDestroyedCallback={() => setTransitioned(true)} />
         {transitioned && (
           <>
+            <CD />
             <Hero />
             <AboutMe />
             <Portfolio />
