@@ -2,8 +2,8 @@ import { useScreenSize } from "@/hooks/useScreenSize";
 import { animated, config, useSpring, useInView } from "@react-spring/web";
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
-import { PingPoing } from "./PingPong";
-import { Tetris } from "./Tetris";
+import { PingPoing } from "../common/animation/PingPong";
+import { Tetris } from "../common/animation/Tetris";
 
 export const AboutMe = () => {
   const [ref, inView] = useInView({ amount: 0.8 });
