@@ -3,7 +3,7 @@ import { CD } from "@/components/CD";
 import { Contact } from "@/components/contact/Contact";
 import { Cta } from "@/components/cta/Cta";
 import { Hero } from "@/components/hero/Hero";
-import { TransitionScreen } from "@/components/hero/TransitionScreen";
+import { TransitionScreen } from "@/components/common/ui/TransitionScreen";
 import { Portfolio } from "@/components/portfolio/Portfolio";
 import Head from "next/head";
 import { useState } from "react";
