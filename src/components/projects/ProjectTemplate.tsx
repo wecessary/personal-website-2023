@@ -1,7 +1,7 @@
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
 import { InfiniteBanner } from "../common/animation/InfiniteBanner";
-import { ProjectTitle } from "./Title";
+import { ProjectHeader } from "./ProjectHeader";
 
 interface ProjectProps {
   title: string;
@@ -12,7 +12,7 @@ interface ProjectProps {
   techStack: string;
 }
 
-export const Project = ({
+export const ProjectTemplate = ({
   title,
   projectImages,
   repeatingImages,
@@ -22,7 +22,7 @@ export const Project = ({
 }: ProjectProps) => {
   return (
     <>
-      <ProjectTitle title={title} />
+      <ProjectHeader title={title} />
       <div className="min-h-screen grid grid-rows-2 text-orange">
         <Row
           localStyles="border-t-2"
