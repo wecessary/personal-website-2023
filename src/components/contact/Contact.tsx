@@ -7,13 +7,13 @@ export const Contact = () => {
       <section className="grid grid-flow-col min-h-screen grid-rows-3 text-orange">
         <Row
           animation="noAnimation"
+          border
           renderRowChild={() => (
             <RowChildContainer
               sideBorders
               textSize="xl"
               childPosition="flexColCenter"
               borderColour="border-orange"
-              bottomBorder
               hover
               p="px-2"
             >
@@ -24,6 +24,7 @@ export const Contact = () => {
           )}
         />
         <Row
+          border
           animation="noAnimation"
           renderRowChild={() => (
             <RowChildContainer
@@ -31,7 +32,6 @@ export const Contact = () => {
               textSize="xl"
               childPosition="flexColCenter"
               borderColour="border-orange"
-              bottomBorder
               hover
               p="px-2"
             >
@@ -40,6 +40,7 @@ export const Contact = () => {
           )}
         />
         <Row
+          border
           animation="noAnimation"
           renderRowChild={() => (
             <RowChildContainer
@@ -47,7 +48,6 @@ export const Contact = () => {
               textSize="xl"
               childPosition="flexColCenter"
               borderColour="border-orange"
-              bottomBorder
               hover
               p="px-2"
             >
