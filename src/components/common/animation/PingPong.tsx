@@ -31,15 +31,21 @@ export const PingPoing = ({ parentInView }: ParentInView) => {
       <div ref={ref} className="flex justify-between gap-4">
         <animated.div
           style={{ y: springs2.y }}
-          className="bg-[#D6916C] h-36 w-6 mr-20"
+          className={`${
+            parentInView ? "bg-[#D6916C]" : "bg-orange"
+          } h-36 w-6 mr-20`}
         />
         <animated.div
           style={{ x: springs2.x }}
-          className="bg-[#D6916C] h-6 w-6 rounded-full mt-12"
+          className={` ${
+            parentInView ? "bg-[#D6916C]" : "bg-orange"
+          } h-6 w-6 rounded-full mt-12`}
         />
         <animated.div
           style={{ y: springs2.y.to((y) => -y) }}
-          className="bg-[#D6916C] h-36 w-6 ml-20"
+          className={`${
+            parentInView ? "bg-[#D6916C]" : "bg-orange"
+          } h-36 w-6 ml-20`}
         />
       </div>
     </>
