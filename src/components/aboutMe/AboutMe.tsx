@@ -6,13 +6,12 @@ import { PingPoing } from "../common/animation/PingPong";
 import { Tetris } from "../common/animation/Tetris";
 
 export const AboutMe = () => {
-  const [ref, inView] = useInView({ amount: 0.8, once: true });
+  const [ref, inView] = useInView({ amount: 0.6, once: true });
   const springs = useSpring({
-    from: { backgroundColor: "#FBF1EA", color: "#312E1D", opacity: 1 },
+    from: { backgroundColor: "#FBF1EA", color: "#312E1D" },
     to: {
-      opacity: inView ? 1 : 0,
       backgroundColor: inView ? "#312E1D" : "#FBF1EA",
-      color: inView ? "#D6916C" : "#312E1D",
+      color: inView ? "#D6916C" : "#AC521F",
     },
     config: config.slow,
   });
@@ -28,7 +27,7 @@ export const AboutMe = () => {
         <Row
           animation="noAnimation"
           border
-          borderColour="border-[#D6916C]"
+          borderColour={`${inView ? "border-[#D6916C]" : "border-orange"}`}
           renderRowChild={() => (
             <RowChildContainer textSize="sm" childPosition="flexColCenter">
               <p className="text-justify">
@@ -41,7 +40,7 @@ export const AboutMe = () => {
         <Row
           animation="noAnimation"
           border
-          borderColour="border-[#D6916C]"
+          borderColour={`${inView ? "border-[#D6916C]" : "border-orange"}`}
           rowSpan="row-span-1 md:row-span-2"
           renderRowChild={() => (
             <RowChildContainer textSize="sm" childPosition="flexColCenter">
