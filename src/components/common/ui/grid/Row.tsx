@@ -22,12 +22,12 @@ export function Row<T>({
   localStyles,
   renderRowChild,
 }: RowProps<T>) {
-  const [finished, setFinished] = useState(false);
+  const [animationFinished, setAnimationFinished] = useState(false);
   const springs = useSpring({
     from: { x: gridLineAnimation[animation] },
     to: { x: "0" },
     onRest() {
-      setFinished(true);
+      setAnimationFinished(true);
     },
     config: config.slow,
   });
@@ -42,7 +42,7 @@ export function Row<T>({
           borderColour || "border-orange"
         } overflow-hidden ${textDirection} flex justify-center`}
       >
-        {renderRowChild(finished)}
+        {renderRowChild(animationFinished)}
       </animated.div>
     </>
   );

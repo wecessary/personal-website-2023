@@ -5,16 +5,16 @@ import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
 
 export const Hero = () => {
-  const [firstRowReady, setFirstRowReady] = useState(false);
+  const [renderLogo, setRenderLogo] = useState(false);
   return (
     <>
-      {firstRowReady && <CD />}
+      {renderLogo && <CD />}
       <section className="grid grid-rows-5 grid-flow-col overflow-hidden min-h-[90vh] lg:min-h-[98vh] text-orange">
         <Row
           animation="animateFromLeft"
           border
           renderRowChild={(isRowReady) => {
-            setFirstRowReady(isRowReady);
+            setRenderLogo(isRowReady);
             return (
               <RowChildContainer
                 childPosition="touchBtBorder"
@@ -51,6 +51,7 @@ export const Hero = () => {
               childPosition="touchBtBorder"
               textSize="md"
               fontBold
+              p="lg:pb-1"
             >
               <Trail animationStart={isRowReady}>{"+44 7597296544"}</Trail>
             </RowChildContainer>
@@ -64,6 +65,7 @@ export const Hero = () => {
               childPosition="touchBtBorder"
               textSize="md"
               fontBold
+              p="lg:pb-1"
             >
               <Trail animationStart={isRowReady}>{"wesleymhj@gmail.com"}</Trail>
             </RowChildContainer>
