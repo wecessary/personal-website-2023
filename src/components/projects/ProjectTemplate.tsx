@@ -10,6 +10,7 @@ interface ProjectProps {
   client: string;
   role: string;
   techStack: string;
+  projectUrl: string;
 }
 
 export const ProjectTemplate = ({
@@ -19,6 +20,7 @@ export const ProjectTemplate = ({
   client,
   role,
   techStack,
+  projectUrl,
 }: ProjectProps) => {
   return (
     <>
@@ -53,7 +55,7 @@ export const ProjectTemplate = ({
               textSize="xs"
               childPosition="none"
             >
-              <div className="grid grid-row-4 h-full">
+              <div className="grid grid-rows-4 h-full">
                 <RowChildContainer
                   textSize="xs"
                   childPosition="flexColCenter"
@@ -86,7 +88,14 @@ export const ProjectTemplate = ({
                   childPosition="flexColCenter"
                   borderColour="border-orange"
                 >
-                  <p className="px-2">Visit Now</p>
+                  <p className="px-2">
+                    <a
+                      className="underline underline-offset-4 hover:no-underline"
+                      href={projectUrl}
+                    >
+                      Visit Now
+                    </a>
+                  </p>
                 </RowChildContainer>
               </div>
             </RowChildContainer>
