@@ -30,7 +30,10 @@ export const TransitionScreen = ({
           style={{ backgroundColor }}
           className={`h-screen flex justify-center items-center`}
         >
-          <animated.p style={style} className="text-4xl font-bold">
+          <animated.p
+            style={style}
+            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold"
+          >
             {item.split("").map((letter, index) => (
               <animated.span
                 key={index}
