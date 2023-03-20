@@ -2,7 +2,9 @@ import { getDeviceType } from "@/lib/screenSize/deviceType";
 import { useEffect, useState } from "react";
 
 export const useScreenSize = () => {
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
+  const [screenSize, setScreenSize] = useState(
+    typeof window === "undefined" ? 0 : window.innerWidth
+  );
   const { isPhone, isTablet } = getDeviceType(screenSize);
 
   useEffect(() => {
