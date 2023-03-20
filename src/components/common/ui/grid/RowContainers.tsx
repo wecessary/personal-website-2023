@@ -31,11 +31,11 @@ export const RowChildContainer = ({
     <div
       className={`${overideDefaultWidth || "w-[90vw] md:w-[80vw]"} ${
         textSizeClasses[textSize]
-      } ${childDisplayClasses[childPosition]} ${
-        sideBorders && "border-r-2 border-l-2"
-      } ${bottomBorder && "border-b-2"} ${borderColour} ${p} ${
-        fontBold && "font-bold"
-      } ${hover && "hover:bg-black hover:text-background"}`}
+      } ${childDisplayClasses[childPosition]} ${sideBorders && "border-x-2"} ${
+        bottomBorder && "border-b-2"
+      } ${borderColour} ${p} ${fontBold && "font-bold"} ${
+        hover && "hover:bg-black hover:text-background"
+      }`}
     >
       {children}
     </div>
