@@ -16,7 +16,8 @@ export default function Home() {
         <title>Wesley Jessie | Front End Developer</title>
         <meta
           name="description"
-          content="Wesley Jessie is a front end developer based in London."
+          content="Wesley Jessie is a front end developer who designs and builds
+          beautiful and functional websites with high-quality code."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
