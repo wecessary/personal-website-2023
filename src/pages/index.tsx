@@ -1,5 +1,5 @@
 import { AboutMe } from "@/components/aboutMe/AboutMe";
-import { CD } from "@/components/CD";
+import { Logo } from "@/components/common/ui/Logo";
 import { Contact } from "@/components/contact/Contact";
 import { Cta } from "@/components/cta/Cta";
 import { Hero } from "@/components/hero/Hero";
@@ -24,7 +24,7 @@ export default function Home() {
         <TransitionScreen onDestroyedCallback={() => setTransitioned(true)} />
         {transitioned && (
           <>
-            <CD />
+            <Logo />
             <Hero />
             <AboutMe />
             <Projects />
