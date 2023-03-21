@@ -56,8 +56,8 @@ export const AboutMe = () => {
           renderRowChild={() => (
             <RowChildContainer textSize="sm" childPosition="flexColCenter">
               <p className="text-justify">
-                As a London-based front-end developer, I make beautiful and
-                functional websites with high-quality code.
+                I am a London-based front-end developer. I design and build
+                beautiful and functional websites with high-quality code.
               </p>
             </RowChildContainer>
           )}
