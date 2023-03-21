@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CD } from "../CD";
+import { Logo } from "../common/ui/Logo";
 import { Trail } from "../common/animation/Trail";
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";

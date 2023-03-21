@@ -2,7 +2,7 @@ import { useScreenSize } from "@/hooks/useScreenSize";
 import { animated, useScroll, useSpring } from "@react-spring/web";
 import { useState } from "react";
 
-export const CD = () => {
+export const Logo = () => {
   const { scrollY } = useScroll();
   const { isPhone, isTablet } = useScreenSize();
 
