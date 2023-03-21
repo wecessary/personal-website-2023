@@ -58,7 +58,12 @@ export const Contact = () => {
       </section>
       <div className="flex justify-center my-2">
         <div className="w-[90vw] md:w-[80vw] text-end font-bold text-orange text-xs md:text-base">
-          Designed and dev by Wesley Jessie
+          <a
+            className="underline underline-offset-4 hover:no-underline"
+            href="https://github.com/wecessary/personal-website-2023"
+          >
+            Designed and dev by Wesley Jessie
+          </a>
         </div>
       </div>
     </>
