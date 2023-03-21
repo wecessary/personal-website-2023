@@ -19,6 +19,7 @@ export default function Home() {
           content="Wesley Jessie is a front end developer based in London."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="./favicon.ico" />
       </Head>
       <main className="font-serif">
         <TransitionScreen onDestroyedCallback={() => setTransitioned(true)} />
