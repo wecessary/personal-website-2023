@@ -9,9 +9,9 @@ export const waizImages = [
   "/waiz-map.jpg",
 ];
 
-export const muscleImages = [
-  "/muscle1.jpg",
-  "/muscle2.jpg",
-  "/muscle1.jpg",
-  "/muscle2.jpg",
+export const gymImages = [
+  "/gym-journal-1.png",
+  "/gym-journal-2.png",
+  "/gym-journal-3.png",
+  "/gym-journal-1.png",
 ];
