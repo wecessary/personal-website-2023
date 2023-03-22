@@ -27,17 +27,17 @@ export const Projects = () => {
         repeatingImages={3}
         client={"Waiz New Zealand Blue Spring Water"}
         role="Design and Dev"
-        techStack="NEXT JS, Typescript, Jest, Cypress.io, Shpoify as a headless CMS"
+        techStack="NEXT JS, Typescript, Jest, Cypress.io, Shopify as a headless CMS"
         projectUrl="https://www.waizwater.com/en-GB"
       />
       <ProjectTemplate
         title="(2) GymJournal.co.uk"
         projectImages={gymImages}
         repeatingImages={1}
-        client={"myself"}
+        client={"GymJournal"}
         role="Design and Dev"
         techStack="React, Typescript, NoSQL, React Router, Jest"
-        projectUrl="https://workout-tracker-bd0f5.web.app/"
+        projectUrl="https://gymjournal.co.uk/"
       />
     </>
   );
