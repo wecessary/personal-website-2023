@@ -76,6 +76,7 @@ export const InfiniteBanner = ({
                   style={{ width: `${itemWidth}vw` }}
                   className="h-auto"
                   alt=""
+                  quality={90}
                 />
               );
             }
