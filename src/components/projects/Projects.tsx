@@ -1,4 +1,4 @@
-import { waizImages, muscleImages } from "@/const/images";
+import { waizImages, gymImages } from "@/const/images";
 import { InfiniteBanner } from "../common/animation/InfiniteBanner";
 import { InfiniteBannerWrapper } from "../common/ui/InfiniteBannerWrapper";
 import { ProjectTemplate } from "./ProjectTemplate";
@@ -31,9 +31,9 @@ export const Projects = () => {
         projectUrl="https://www.waizwater.com/en-GB"
       />
       <ProjectTemplate
-        title="(2) Muscle Department"
-        projectImages={muscleImages}
-        repeatingImages={2}
+        title="(2) GymJournal.co.uk"
+        projectImages={gymImages}
+        repeatingImages={1}
         client={"myself"}
         role="Design and Dev"
         techStack="React, Typescript, NoSQL, React Router, Jest"
