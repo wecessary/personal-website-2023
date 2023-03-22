@@ -24,7 +24,7 @@ export const ProjectTemplate = ({
 }: ProjectProps) => {
   return (
     <>
-      <ProjectHeader title={title} />
+      <ProjectHeader projectUrl={projectUrl} title={title} />
       <div className="min-h-screen grid grid-rows-2 text-orange">
         <Row
           localStyles="border-t-2"
