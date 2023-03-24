@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export const Rainbow = ({}) => {
   const [ref, inView] = useInView({ amount: 1 });
-  const text = ["UPGRADE TO", "CUSTOM", "DESGIN AND", "CODE."];
+  const text = ["UPGRADE TO", "CUSTOM", "DESIGN AND", "CODE."];
   const colour = [
     "f94144",
     "f3722c",
