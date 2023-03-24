@@ -13,7 +13,7 @@ export const Cta = () => {
           p="px-2"
         >
           <div className="text-gray-500">TIRED OF</div>
-          <div className="text-gray-500">GENRIC</div>
+          <div className="text-gray-500">GENERIC</div>
           <div className="text-gray-500">TEMPLATES?</div>
           <Rainbow />
           <div className="text-end text-base md:text-2xl text-black">
