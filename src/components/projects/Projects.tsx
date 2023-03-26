@@ -29,6 +29,7 @@ export const Projects = () => {
         role="Design and Dev"
         techStack="NEXT JS, Typescript, Jest, Cypress.io, Shopify as a headless CMS"
         projectUrl="https://www.waizwater.com/en-GB"
+        fallbackImage="/waiz-video-fallback.jpg"
       />
       <ProjectTemplate
         title="(2) GymJournal.co.uk"
@@ -38,6 +39,7 @@ export const Projects = () => {
         role="Design and Dev"
         techStack="React, Typescript, NoSQL, React Router, Jest"
         projectUrl="https://gymjournal.co.uk/"
+        fallbackImage="/gym-video-fallback.jpg"
       />
     </>
   );

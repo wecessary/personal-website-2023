@@ -11,6 +11,7 @@ interface ProjectProps {
   projectUrl: string;
   backgroundImg: `bg-${string}`;
   videoUrl: string;
+  fallbackImage: string;
 }
 
 export const ProjectTemplate = ({
@@ -21,6 +22,7 @@ export const ProjectTemplate = ({
   projectUrl,
   backgroundImg,
   videoUrl,
+  fallbackImage,
 }: ProjectProps) => {
   return (
     <>
@@ -37,7 +39,11 @@ export const ProjectTemplate = ({
               textSize="xs"
               childPosition="flexColCenter"
             >
-              <Player backgroundImg={backgroundImg} videoUrl={videoUrl} />
+              <Player
+                fallbackImage={fallbackImage}
+                backgroundImg={backgroundImg}
+                videoUrl={videoUrl}
+              />
             </RowChildContainer>
           )}
         />
