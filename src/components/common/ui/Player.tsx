@@ -30,8 +30,14 @@ export function Player({
           playing={inView}
           controls={false}
           url={videoUrl}
-          config={{ file: { attributes: { disableRemotePlayback: true } } }}
-          fallback={<Image src={fallbackImage} fill alt="" />}
+          config={{
+            file: {
+              attributes: {
+                disableRemotePlayback: true,
+                poster: `${fallbackImage}`,
+              },
+            },
+          }}
         />
       </div>
     </div>
