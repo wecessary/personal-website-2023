@@ -23,17 +23,17 @@ export const Projects = () => {
       </InfiniteBannerWrapper>
       <ProjectTemplate
         title="(1)Waiz Water Ecommerce"
-        projectImages={waizImages}
-        repeatingImages={3}
         client={"Waiz New Zealand Blue Spring Water"}
+        backgroundImg={"bg-waiz"}
+        videoUrl={"/waiz-video.mp4"}
         role="Design and Dev"
         techStack="NEXT JS, Typescript, Jest, Cypress.io, Shopify as a headless CMS"
         projectUrl="https://www.waizwater.com/en-GB"
       />
       <ProjectTemplate
         title="(2) GymJournal.co.uk"
-        projectImages={gymImages}
-        repeatingImages={1}
+        backgroundImg={"bg-gym"}
+        videoUrl={"/gym-video-v2.mp4"}
         client={"GymJournal"}
         role="Design and Dev"
         techStack="React, Typescript, NoSQL, React Router, Jest"

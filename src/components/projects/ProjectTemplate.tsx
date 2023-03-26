@@ -1,26 +1,26 @@
 import { Row } from "../common/ui/grid/Row";
 import { RowChildContainer } from "../common/ui/grid/RowContainers";
-import { InfiniteBanner } from "../common/animation/InfiniteBanner";
+import { Player } from "../common/ui/Player";
 import { ProjectHeader } from "./ProjectHeader";
 
 interface ProjectProps {
   title: string;
-  projectImages: string[];
-  repeatingImages: number;
   client: string;
   role: string;
   techStack: string;
   projectUrl: string;
+  backgroundImg: `bg-${string}`;
+  videoUrl: string;
 }
 
 export const ProjectTemplate = ({
   title,
-  projectImages,
-  repeatingImages,
   client,
   role,
   techStack,
   projectUrl,
+  backgroundImg,
+  videoUrl,
 }: ProjectProps) => {
   return (
     <>
@@ -37,11 +37,7 @@ export const ProjectTemplate = ({
               textSize="xs"
               childPosition="flexColCenter"
             >
-              <InfiniteBanner
-                itemsSrc={projectImages}
-                numberOfRepeatItems={repeatingImages}
-                itemType="image"
-              />
+              <Player backgroundImg={backgroundImg} videoUrl={videoUrl} />
             </RowChildContainer>
           )}
         />
