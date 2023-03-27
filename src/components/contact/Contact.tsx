@@ -35,7 +35,7 @@ export const Contact = () => {
               hover
               p="px-2"
             >
-              <a href="./WJ_CV_12102022.pdf">CV</a>
+              <a href="./wj-cv-27032023-main.pdf">CV</a>
             </RowChildContainer>
           )}
         />
