@@ -37,7 +37,7 @@ export const Rainbow = ({}) => {
       <div className="flex flex-col" ref={ref}>
         {trails.map((style, index) => (
           <div key={index} className="relative overflow-y-hidden">
-            <div className="text-[#000]">{text[index]}</div>
+            <div className="text-black">{text[index]}</div>
             <animated.span
               style={{
                 ...style,
